@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.3
+
+- Fix: the installer trusted its own marker to know what is on the house. A version installed by 1.4.0
+  into the wrong folder was thus never reinstalled. It now compares the version in the installed
+  `manifest.json` with the pinned one, and reinstalls when they differ.
+
 ## 1.4.2
 
 - Fix: restarting Home Assistant after an install answered 403. The app now runs with the
