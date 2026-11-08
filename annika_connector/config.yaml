@@ -1,0 +1,28 @@
+name: Annika Connector
+version: "1.4.0"
+slug: annika_connector
+image: ghcr.io/facuspagnuolo/ha-app-{arch}
+description: Outbound rathole tunnel for Home Assistant, plus local access from the home network
+arch:
+  - amd64
+  - aarch64
+startup: application
+boot: auto
+init: false
+hassio_api: true
+hassio_role: default
+map:
+  - type: homeassistant_config
+    read_only: false
+ports:
+  8124/tcp: 8124
+ports_description:
+  8124/tcp: Local HTTPS access from your home network
+options:
+  unit_id: "unit-123"
+  log_level: info
+  local_access: true
+schema:
+  unit_id: "match(^[a-zA-Z0-9_-]+$)"
+  log_level: "list(error|warn|info|debug|trace)"
+  local_access: bool
