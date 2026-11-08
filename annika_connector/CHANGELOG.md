@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.4
+
+- Fix: the restart of Home Assistant outlives the request that asks for it, so the request timed out and
+  was treated as a failure. The restart was then repeated on every start of the app and the pending
+  install never ran. A timed-out request now counts as a restart in progress, and a pending restart is
+  skipped when an install is about to restart Home Assistant anyway.
+
 ## 1.4.3
 
 - Fix: the installer trusted its own marker to know what is on the house. A version installed by 1.4.0
