@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.2
+
+- Fix: restarting Home Assistant after an install answered 403. The app now runs with the
+  `manager` Supervisor role, which is what `POST /core/restart` needs.
+
 ## 1.4.1
 
 - Fix: the installer looked for the Home Assistant config at `/config`, but Supervisor mounts

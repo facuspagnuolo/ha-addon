@@ -1,5 +1,5 @@
 name: Annika Connector
-version: "1.4.1"
+version: "1.4.2"
 slug: annika_connector
 image: ghcr.io/facuspagnuolo/ha-app-{arch}
 description: Outbound rathole tunnel for Home Assistant, plus local access from the home network
@@ -10,7 +10,7 @@ startup: application
 boot: auto
 init: false
 hassio_api: true
-hassio_role: default
+hassio_role: manager
 map:
   - type: homeassistant_config
     read_only: false
