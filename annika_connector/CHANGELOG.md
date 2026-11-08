@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.1
+
+- Fix: the installer looked for the Home Assistant config at `/config`, but Supervisor mounts
+  `homeassistant_config` at `/homeassistant`, so every install failed with ENOENT.
+
 ## 1.4.0
 
 - The app installs and updates the Annika integration (`custom_components/annika`) itself, in
